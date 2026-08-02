@@ -28,4 +28,32 @@ changeCss.addEventListener("mousemove" ,function(){
     changeCss.style.color = "red";
     changeCss.style.backgroundColor ="blue";
     
-})  
+}) ;
+
+
+const secondChance = document.querySelector("h5");
+secondChance.addEventListener("click",function(){
+secondChance.style.color = "skyblue";
+secondChance.innerHTML = "ofcourse why not";
+secondChance.style.fontSize = "44px";
+});
+
+// Callback function {Callback Function ek aisa function hota hai jo dusre function ko argument ke roop me pass kiya jata hai , aur baad me call hota hai} #note Function ke andar function pass karna = Callback Function.
+
+function greet(name){
+  console.log("hello" , name);
+}
+  function processUser(callback){
+    callback("saif");
+  }
+  processUser(greet);
+
+// result check 
+function display(result){
+    console.log(result);
+}
+function showResult(a , b ,calculate){
+   let sum = a + b;
+   calculate(sum);
+}
+showResult(a , b, display)
